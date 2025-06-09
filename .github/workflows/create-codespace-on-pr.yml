@@ -11,4 +11,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.MY_CUSTOM_TOKEN }}
         run: |
-          gh codespace create --repo ${{ github.repository }} --branch ${{ github.head_ref }} --machine m3.large
+          gh codespace create --repo ${{ github.repository }} --branch ${{ github.head_ref }} --machine standardLinux32gb
