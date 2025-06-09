@@ -1,0 +1,12 @@
+name: Create Codespace on PR
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+jobs:
+  create_codespace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-codespace@v1
+        with:
+          branch: ${{ github.head_ref }}
+          machine-type: "m3.large"
